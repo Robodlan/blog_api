@@ -1,7 +1,11 @@
-fetch("https://apis.scrimba.com/jsonplaceholder/posts")
+//  https://jsonplaceholder.typicode.com/ 
+
+// https://apis.scrimba.com/jsonplaceholder/posts
+fetch("https://jsonplaceholder.typicode.com/todos")  
     .then(res => res.json())
     .then(data => {
         const postsArr = data.slice(0, 5)
+        console.log(postsArr)
         let html = ""
         for (let post of postsArr) {
             html += `
