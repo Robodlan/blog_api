@@ -8,18 +8,12 @@
         <nav>
             <h3>BlogSpace</h3>
         </nav>
-
-        <!-- https://jsonplaceholder.typicode.com/ -->
-        
-        <!-- 
-        Challenge:
-        
-        Create a form with 2 inputs (each with an associated label), 
-        one for the post title (a text input) and one for the post body
-        (a textarea element). Then add a button to the form. 
-        
-        Don't worry about styling quite yet.
-         -->
+       <form class="form" id="form">
+            <input type="text" class="blog-title" id="blog-title" placeholder="Blog Title" required>
+            <textarea class="blog-post" id="blog-post" placeholder="Blog Content" required></textarea>
+            <button class="btn" id="btn" type="submit">Add Blog Post</button>
+        </form> 
+    
          
         <div id="blog-list"></div>
         <script src="script.js"></script>
