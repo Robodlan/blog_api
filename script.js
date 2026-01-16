@@ -1,6 +1,13 @@
-//  https://jsonplaceholder.typicode.com/ 
+let postsArr = []
+const blogList = document.getElementById("blog-list")
+const btn = document.getElementById("btn")
+const blogTitle = document.getElementById("blog-title").value
+const blogBody = document.getElementById("blog-body").value
 
-// https://apis.scrimba.com/jsonplaceholder/posts
+function renderPosts() {
+
+}
+
 fetch("https://jsonplaceholder.typicode.com/todos")  
     .then(res => res.json())
     .then(data => {
@@ -16,3 +23,8 @@ fetch("https://jsonplaceholder.typicode.com/todos")
         }
         document.getElementById("blog-list").innerHTML = html
     })
+
+btn.addEventListener("click", function(e) {
+    e.preventDefault(e)
+}
+
