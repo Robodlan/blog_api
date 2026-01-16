@@ -26,5 +26,6 @@ fetch("https://jsonplaceholder.typicode.com/todos")
 
 btn.addEventListener("click", function(e) {
     e.preventDefault(e)
+    
 }
 
