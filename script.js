@@ -44,12 +44,12 @@ function renderPost() {
         }
     }
     fetch('https://jsonplaceholder.typicode.com/posts', options)
-        .then(res => res.json())
-        .then(post => {
-            postsArr.unshift(post)
-            renderPost()
-            form.reset()
-        })
+       .then(res => res.json())
+       .then(post => {
+          postsArr.unshift(post)
+          renderPost()
+          form.reset()
+       })
 
 
      })
