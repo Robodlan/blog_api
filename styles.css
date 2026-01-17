@@ -53,6 +53,12 @@ nav > h3 {
     flex-direction: column;
     justify-content: center;
 }
+
+label {
+    font-size: 1.2em;
+    color: var(--color-4);
+    text-align: center;
+}
 input, textarea {
     padding: 10px;
     font-size: 1em;
