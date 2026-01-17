@@ -21,11 +21,11 @@ fetch("https://jsonplaceholder.typicode.com/todos")
                 <hr />
             `
         }
-        document.getElementById("blog-list").innerHTML = html
+        blogList.innerHTML += html
     })
 
-btn.addEventListener("click", function(e) {
-    e.preventDefault(e)
+// btn.addEventListener("click", function(e) {
+//     e.preventDefault(e)
     
-}
+// }
 
