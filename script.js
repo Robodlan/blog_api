@@ -8,7 +8,7 @@ function renderPosts() {
 
 }
 
-fetch("https://jsonplaceholder.typicode.com/todos")  
+fetch("https://jsonplaceholder.typicode.com/posts")  
     .then(res => res.json())
     .then(data => {
         const postsArr = data.slice(0, 5)
@@ -21,7 +21,8 @@ fetch("https://jsonplaceholder.typicode.com/todos")
                 <hr />
             `
         }
-        blogList.innerHTML += html
+        blogList.innerHTML= html
+        console.log(html)
     })
 
 // btn.addEventListener("click", function(e) {
