@@ -1,19 +1,13 @@
-let postsArr = []
+let html = []
 const blogList = document.getElementById("blog-list")
 const btn = document.getElementById("btn")
 const blogTitle = document.getElementById("blog-title").value
 const blogBody = document.getElementById("blog-body").value
 
 function renderPosts() {
-
-}
-
-fetch("https://jsonplaceholder.typicode.com/posts")  
-    .then(res => res.json())
-    .then(data => {
-        const postsArr = data.slice(0, 5)
+    postsArr = data.slice(0, 5)
         console.log(postsArr)
-        let html = ""
+        
         for (let post of postsArr) {
             html += `
                 <h3>${post.title}</h3>
@@ -22,11 +16,31 @@ fetch("https://jsonplaceholder.typicode.com/posts")
             `
         }
         blogList.innerHTML= html
-        console.log(html)
+}
+
+fetch("https://jsonplaceholder.typicode.com/posts")  
+    .then(res => res.json())
+    .then(data => {
+        renderPosts(data)
+        
     })
 
-// btn.addEventListener("click", function(e) {
-//     e.preventDefault(e)
-    
-// }
+    const options ={
+    method: "POST",
+    body: JSON.stringify({
+        title: blogTitle,
+        body: blogBody,
+    }),
+    headers: {
+        "Content-type": "application/json; charset=UTF-8",}
+    }
+
+btn.addEventListener("click", function(e) {
+    e.preventDefault(e)
+   fetch("https://jsonplaceholder.typicode.com/posts", options)
+       .then(res => res.json())
+       .then(post => {
+           renderPosts(post)
+       })   
+})
 
